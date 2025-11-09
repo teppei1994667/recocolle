@@ -1,0 +1,33 @@
+# Environment variables
+.env
+.env*
+!.env*.erb
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ruby/Rails - Backend
+backend/.bundle
+backend/config/master.key
+backend/log/*
+backend/tmp/*
+backend/storage/*
+!backend/log/.keep
+!backend/tmp/.keep
+!backend/tmp/pids/.keep
+!backend/tmp/storage/.keep
+!backend/storage/.keep

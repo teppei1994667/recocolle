@@ -1,0 +1,32 @@
+source "https://rubygems.org"
+
+gem "rails", "~> 7.2.2", ">= 7.2.2.2"
+# PostgreSQL用のデータベースドライバ
+gem "pg", "~> 1.1"
+# Webサーバー [https://github.com/puma/puma]
+gem "puma", ">= 5.0"
+# 開発開始後に要検討 [https://github.com/rails/jbuilder]
+# gem "jbuilder"
+
+# クロスプラットフォームでタイムゾーン情報を提供
+gem "tzinfo-data", platforms: %i[ windows jruby ]
+
+# アプリケーションの起動を高速化するキャッシュライブラリ; required in config/boot.rb
+gem "bootsnap", require: false
+
+# Active Storageで画像のリサイズや変換を行う [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+gem "image_processing", "~> 1.2"
+
+# CORS（クロスオリジンリソースシェアリング）
+gem "rack-cors"
+
+group :development, :test do
+  # デバッガ https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+
+  # 静的解析によるセキュリティ脆弱性検出ツール [https://brakemanscanner.org/]
+  gem "brakeman", require: false
+
+  # RuboCopのRails向けスタイルガイドセット [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop-rails-omakase", require: false
+end
