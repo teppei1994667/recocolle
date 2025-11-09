@@ -31,3 +31,8 @@ backend/storage/*
 !backend/tmp/pids/.keep
 !backend/tmp/storage/.keep
 !backend/storage/.keep
+
+# Next.js / Node
+/frontend/node_modules
+/frontend/.next
+/frontend/out

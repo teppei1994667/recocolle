@@ -22,5 +22,18 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:recocolle_dev_password@db:5432/recocolle_development
 
+  frontend:
+    build: ./frontend
+    command: npm run dev
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:3000
+
 volumes:
   db-data:
