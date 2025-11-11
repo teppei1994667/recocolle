@@ -14,7 +14,7 @@ WORKDIR /app
 
 # Gemfile を先にコピーして bundle install のキャッシュを活かす
 # COPY Gemfile Gemfile.lock ./
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 # アプリ全体をコピー
